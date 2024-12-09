@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<head>
+    <title>Philippine Auditory and Literature Arts</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #b47b37;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        header nav {
+            display: flex;
+        }
+
+        header nav a {
+            font-family: 'Garamond', sans-serif;
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 45px;
+        }
+
+        header nav a:hover {
+            text-decoration: underline;
+        }
+
+        .menu-button {
+            position: absolute;
+            left: 10px;
+            font-size: 45px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: white;
+        }
+
+        .main-section {
+            text-align: center;
+            padding: 50px;
+            background-image: url('Homepage theme.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            height: 90vh;
+        }
+
+        .main-section h1 {
+            font-size: 48px;
+    background-color: #cebba7; 
+			opacity: 0.9; 
+            padding: 20px; 
+            border-radius: 10px; 
+			border: 10px solid #c1955a; 
+            margin: 20px 0;
+        }
+
+        .side-menu {
+            position: fixed;
+            left: -250px;
+            top: 0;
+            width: 250px;
+            height: 100%;
+            background-color: #af916f;
+            color: white;
+            overflow-y: auto;
+            transition: left 0.3s ease;
+        }
+
+        .side-menu ul {
+            list-style: none;
+            padding: 20px;
+        }
+
+        .side-menu ul li {
+            margin: 15px 0;
+        }
+
+        .side-menu ul li a {
+            color: white;
+            font-family: 'Garamond', sans-serif;
+            text-decoration: none;
+            font-size: 25px;
+            display: block;
+            padding: 10px 0;
+        }
+
+        .side-menu ul li:nth-child(1) a {
+            border-bottom: 3px solid white; /* Separation line for The Team */
+        }
+
+        .side-menu ul li:nth-child(2) a {
+            border-bottom: 3px solid white; /* Separation line for Video */
+        }
+
+        .side-menu ul li:nth-child(3) a {
+            border-bottom: 3px solid white; /* Separation line for References */
+        }
+
+        .side-menu ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .side-menu .close-button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        .content-section {
+            padding: 20px;
+            display: none;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            border-radius: 10px;
+        }
+
+        .content-section h2 {
+            margin-top: 0;
+        }
+
+        .popup-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup-content {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .popup-content h3 {
+            margin-top: 0;
+            font-size: 20px;
+        }
+
+        .popup-content button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+
+        .popup-content button:hover {
+            background: #0056b3;
+        }
+
+        .popup-content button.cancel {
+            background: gray;
+        }
+
+        .popup-content button.cancel:hover {
+            background: darkgray;
+        }
+
+        .popup-content hr {
+            border: 0;
+            border-top: 1px solid #ccc;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <button class="menu-button" onclick="toggleMenu()">☰</button>
+        <nav>
+            <a href="https://dreamylicious.github.io/G2-Art-app-FINAL-output/Blogs%20(Final).html">BLOGS</a>
+            <a href="https://dreamylicious.github.io/G2-Art-app-FINAL-output/quiz.html">QUIZ</a>
+            <a href="https://dreamylicious.github.io/G2-Art-app-FINAL-output/Gallery.html">GALLERY</a>
+        </nav>
+    </header>
+
+    <div class="main-section">
+        <h1>Welcome to the Philippine Auditory and Literature Arts</h1>
+    </div>
+
+    <div class="side-menu" id="side-menu">
+        <button class="close-button" onclick="toggleMenu()">✖</button>
+        <ul>
+            <li><a href="https://dreamylicious.github.io/G2-Art-app-FINAL-output/The%20team.html" onclick="showContent('team')">The Team</a></li>
+            <li><a href="https://adamsoneduph-my.sharepoint.com/:w:/g/personal/john_marloh_taylan_adamson_edu_ph/Ed0KER8QkfxLsy-1BcbEMQIBWkmT8hAVQoXTNQVP_GD5BQ?e=sUcx2E" onclick="showContent('references')">References</a></li>
+        </ul>
+    </div>
+
+    <div class="content-section" id="team-content">
+        <h2>The Team</h2>
+        <p>Meet our amazing team who made this project possible.</p>
+    </div>
+
+    <div class="content-section" id="video-content">
+        <h2>Video</h2>
+        <p>Watch our video presentation to learn more about the topic.</p>
+        <button onclick="openPopup()">Open Popup Menu</button>
+    </div>
+
+    <div class="content-section" id="references-content">
+        <h2>References</h2>
+        <p>Here are the references used in our project.</p>
+    </div>
+
+    <div class="popup-menu" id="popup-menu">
+        <div class="popup-content">
+            <h3>Choose an Option</h3>
+            <button onclick="openLink()">Open Link</button>
+            <hr>
+            <button onclick="copyLink()">Copy Link</button>
+            <hr>
+            <button class="cancel" onclick="closePopup()">Cancel</button>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const sideMenu = document.getElementById('side-menu');
+            sideMenu.style.left = sideMenu.style.left === '0px' ? '-250px' : '0px';
+        }
+
+        function showContent(section) {
+            const contents = document.querySelectorAll('.content-section');
+            contents.forEach(content => (content.style.display = 'none'));
+
+            const selectedContent = document.getElementById(`${section}-content`);
+            if (selectedContent) {
+                selectedContent.style.display = 'block';
+            }
+        }
+
+        function openPopup() {
+            document.getElementById('popup-menu').style.display = 'flex';
+        }
+
+        function closePopup() {
+            document.getElementById('popup-menu').style.display = 'none';
+        }
+
+        function openLink() {
+            window.open(link, '_blank');
+            closePopup();
+        }
+
+        function copyLink() {
+            navigator.clipboard.writeText(link).then(() => alert('Link copied to clipboard!'));
+            closePopup();
+        }
+    </script>
+</body>
+</html>

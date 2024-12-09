@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Philippine Auditory Art History Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background: url('kulintang.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 60px;
+            background: rgba(260, 260, 260, 0.9);
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            font-size: 3.5em;
+            margin-bottom: 40px;
+        }
+        .question {
+            font-size: 2em;
+            margin-bottom: 30px;
+        }
+        .options {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            align-items: center;
+            justify-content: center;
+        }
+        .options button {
+            padding: 20px 40px;
+            font-size: 1.6em;
+            border: 3px solid #007bff;
+            border-radius: 50px;
+            background: linear-gradient(145deg, #007bff, #0056b3);
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+        }
+        .options button:hover {
+            background: #0056b3;
+            transform: scale(1.1);
+        }
+        .options button:active {
+            background: #003f8a;
+            transform: scale(0.95);
+        }
+        .result {
+            margin-top: 40px;
+            font-size: 2em;
+            font-weight: bold;
+        }
+        .score {
+            margin-top: 30px;
+            font-size: 1.6em;
+            color: #007bff;
+        }
+        .feedback {
+            font-size: 1.8em;
+            margin-top: 20px;
+        }
+        .feedback.correct {
+            color: green;
+        }
+        .feedback.wrong {
+            color: red;
+        }
+        .perfect-score {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #28a745;
+            margin-top: 40px;
+        }
+        .perfect-score span {
+            font-size: 4em;
+            display: block;
+            margin-top: 20px;
+        }
+        .perfect-score .congratulations {
+            background-color: #007bff;
+            color: white;
+            padding: 25px 50px;
+            border-radius: 15px;
+            margin-top: 30px;
+            font-size: 2.2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Philippine Auditory Art History Quiz</h1>
+        <div id="quiz">
+            <p class="question" id="question">Loading question...</p>
+            <div class="options" id="options"></div>
+            <p class="score" id="score">Score: 0</p>
+            <p class="feedback" id="feedback"></p>
+        </div>
+        <div class="result" id="result"></div>
+        <div class="perfect-score" id="perfect-score"></div>
+    </div>
+
+    <script>
+        const questions = [
+            {
+                question: "Which of these is a bamboo instrument from the Pre-Colonial period?",
+                options: ["Kulintang", "Tongatong", "Sa Ugoy ng Duyan", "Bodabil"],
+                answer: "Tongatong"
+            },
+            {
+                question: "Which traditional Filipino theater performance involves dramatic scenes and music?",
+                options: ["Kundiman", "Zarzuela", "Indie", "Hip-hop"],
+                answer: "Zarzuela"
+            },
+            {
+                question: "What is the genre of music popular during the Spanish period that involves storytelling?",
+                options: ["Jazz", "Zarzuela", "Kundiman", "Protest music"],
+                answer: "Kundiman"
+            },
+            {
+                question: "Which musical performance, influenced by the American period, incorporates comedy and song?",
+                options: ["Bodabil", "Hip-hop", "Kulintang", "Indie"],
+                answer: "Bodabil"
+            },
+            {
+                question: "Which Filipino traditional instrument is known for being a two-stringed lute?",
+                options: ["Kudyapi", "kulintang", "Tongatong", "Hip-hop"],
+                answer: "Kudyapi"
+            },
+            {
+                question: "What form of music is performed during the Japanese occupation in the Philippines, often heard in solemn ceremonies?",
+                options: ["Kundiman", "Sa Ugoy ng Duyan", "Pasyon", "Protest music"],
+                answer: "Pasyon"
+            },
+            {
+                question: "Which music genre became popular in the Philippines during the American period and was influenced by Western styles?",
+                options: ["Kundiman", "Jazz", "Zarzuela", "Indie"],
+                answer: "Jazz"
+            },
+            {
+                question: "Which genre of music gained popularity after World War II and is related to the radio broadcasting era?",
+                options: ["Indie", "Opm", "Jazz", "Kundiman"],
+                answer: "Opm"
+            },
+            {
+                question: "What Filipino music genre blends traditional Filipino styles with Western influence and was popular in the Post-War period?",
+                options: ["Protest music", "Jazz", "Opm", "Kulintang"],
+                answer: "Opm"
+            },
+            {
+                question: "Which music genre is associated with the Contemporary period and often features personal storytelling and acoustic elements?",
+                options: ["Folk music", "Indie", "Hip-hop", "Protest music"],
+                answer: "Indie"
+            }
+        ];
+
+        let currentQuestionIndex = 0;
+        let score = 0;
+
+        const questionElement = document.getElementById('question');
+        const optionsElement = document.getElementById('options');
+        const resultElement = document.getElementById('result');
+        const scoreElement = document.getElementById('score');
+        const feedbackElement = document.getElementById('feedback');
+        const perfectScoreElement = document.getElementById('perfect-score');
+
+        function loadQuestion() {
+            const currentQuestion = questions[currentQuestionIndex];
+            questionElement.textContent = currentQuestion.question;
+
+            optionsElement.innerHTML = '';
+            feedbackElement.textContent = '';
+
+            currentQuestion.options.forEach(option => {
+                const button = document.createElement('button');
+                button.textContent = option;
+                button.addEventListener('click', () => checkAnswer(option));
+                optionsElement.appendChild(button);
+            });
+        }
+
+        function checkAnswer(selectedOption) {
+            const currentQuestion = questions[currentQuestionIndex];
+
+            if (selectedOption === currentQuestion.answer) {
+                score++;
+                scoreElement.textContent = `Score: ${score}`;
+                feedbackElement.textContent = 'Your answer is correct!';
+                feedbackElement.className = 'feedback correct';
+            } else {
+                feedbackElement.textContent = 'Your answer is wrong!';
+                feedbackElement.className = 'feedback wrong';
+            }
+
+            currentQuestionIndex++;
+
+            // Wait for 3 seconds (3000 milliseconds) before loading the next question
+            setTimeout(() => {
+                if (currentQuestionIndex < questions.length) {
+                    loadQuestion();
+                } else {
+                    displayResult();
+                }
+            }, 3000); // 3-second delay before showing the next question
+        }
+
+        function displayResult() {
+            quiz.style.display = 'none';
+            resultElement.textContent = `You scored ${score} out of ${questions.length}!`;
+
+            if (score === questions.length) {
+                perfectScoreElement.innerHTML = `
+                    <span>Perfect Score!</span>
+                    <div class="congratulations">Congratulations! You got everything right!</div>
+                `;
+            }
+        }
+
+        loadQuestion();
+    </script>
+</body>
+</html>

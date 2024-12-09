@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blogs</title>
+  <style>
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      color: #fff;
+      background: linear-gradient(to bottom, #0038a8, #ffffff, #ce1126); /* Inspired by the Philippine flag colors */
+      background-attachment: fixed;
+      background-size: cover;
+    }
+    header {
+      background: rgba(0, 0, 0, 0.8); /* Black */
+      color: #fff;
+      padding: 1rem 0;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+      font-family: 'Brush Script MT', sans-serif; /* Artistic font for the title */
+      letter-spacing: 2px;
+    }
+    nav {
+      text-align: center;
+      margin: 1rem 0;
+    }
+    nav a {
+      text-decoration: none;
+      margin: 0 1rem;
+      color: #FFD700; /* Gold for links */
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: rgba(0, 0, 0, 0.9); /* Black background for sections */
+      border: 3px solid #0038a8; /* Flag's blue */
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: #0, 0, 0; /* White text for headings */
+    }
+    .art-piece {
+      background: rgba(240, 240, 240, 0.9);
+      margin: 1.5rem 0;
+      padding: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      color: #333;
+    }
+    .art-piece h2 {
+      font-size: 1.5rem;
+      margin-top: 0;
+    }
+    .art-piece p {
+      font-style: italic;
+    }
+    .art-piece audio {
+      width: 100%;
+      margin-top: 1rem;
+    }
+    .art-piece img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: rgba(0, 0, 0, 0.8); /* Black footer */
+      color: #fff;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 1rem;
+    }
+    footer p {
+      margin: 0;
+    }
+
+    /* Comment section styles */
+    .comment-section {
+      background-color: #fff;
+      color: #333;
+      padding: 1rem;
+      border-radius: 10px;
+      margin-top: 2rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .comment-section h3 {
+      margin-bottom: 1rem;
+      color: #0038a8; /* Blue header */
+    }
+    .comment-form input, .comment-form textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      font-size: 1rem;
+    }
+    .comment-form button {
+      background-color: #0038a8;
+      color: #fff;
+      padding: 0.8rem 2rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .comment-form button:hover {
+      background-color: #005bb5;
+    }
+    .comments-list {
+      margin-top: 1rem;
+    }
+    .comment {
+      background-color: #f9f9f9;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-left: 4px solid #0038a8;
+      border-radius: 5px;
+    }
+    .comment p {
+      margin: 0;
+    }
+    .comment .author {
+      font-weight: bold;
+      color: #0038a8;
+    }
+	.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  background-color: #0038a8;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #005bb5;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>A Journey Through Philippine Auditory Arts</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <section id="about">
+      <h2>About Auditory Arts</h2>
+      <p>
+        The auditory arts in the Philippines encompass the rich and diverse musical traditions, vocal expressions, and sound-based performances that reflect the country’s unique cultural identity. Rooted in a history shaped by indigenous customs, colonial influences, and contemporary innovations, these art forms play a vital role in Philippine society as a means of storytelling, ritual, and entertainment.
+      </p>
+      <p>
+        <strong>Indigenous Roots</strong><br>
+        Traditional Filipino auditory arts are deeply connected to the rhythms of nature and community life. Ethnic groups like the T'boli, Ifugao, and Maguindanao use gongs, bamboo instruments, and vocal chanting in rituals, celebrations, and storytelling. Instruments such as the kulintang (a set of gongs), kudyapi (a two-stringed lute), and tongali (nose flute) highlight the craftsmanship and creativity of these communities.
+      </p>
+      <p>
+        <strong>Colonial and Modern Influences</strong><br>
+        The Spanish colonial period introduced European musical forms like liturgical hymns, kundiman (a traditional Filipino love song), and harana (serenades). These were later fused with native sounds, creating unique hybrids. American influence in the 20th century brought jazz, rock, and pop, which Filipino musicians adapted into their own genres, such as OPM (Original Pilipino Music).
+      </p>
+      <p>
+        <strong>Contemporary Scene</strong><br>
+        Today, the auditory arts thrive in both traditional and modern spaces. Folk music is preserved through cultural festivals, while the urban scene buzzes with a vibrant mix of pop, hip-hop, and indie music. Filipino artists continue to innovate, using digital platforms to share their work globally.
+      </p>
+      <p>
+        The auditory arts in the Philippines are a testament to the nation’s adaptability, resilience, and artistic spirit, capturing the essence of Filipino life through sound and music.
+      </p>
+    </section>
+
+    <section id="gallery">
+      <h2>Gallery</h2>
+
+      <div class="art-piece">
+        <h2>Kulintang</h2>
+        <img src="kulintang.jpeg" alt="Kulintang Instrument">
+        <p>
+          The kulintang is a traditional ensemble of gongs that plays a significant role in the musical heritage of various ethnic groups in the Philippines. It is often used in rituals, celebrations, and communal gatherings, showcasing the rich oral traditions and musical practices of pre-colonial Filipinos.
+        </p>
+        <!-- Replace with actual audio file path -->
+        <audio controls>
+          <source src="Kulintang.m4a" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+
+      <div class="art-piece">
+        <h2>Kundiman</h2>
+        <img src="kundiman.jpeg" alt="Kundiman Music">
+        <p>
+          Kundiman is a genre of traditional Filipino love songs that emerged during the Spanish colonial period. It blends indigenous musical styles with Spanish influences, characterized by its lyrical melodies and romantic themes. Kundiman became a medium for expressing Filipino sentiments and identity during a time of colonization.
+        </p>
+        <!-- Replace with actual audio file path -->
+        <audio controls>
+          <source src="Kundiman.m4a" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+
+      <!-- Add more art pieces as needed -->
+    </section>
+
+    <section id="comment-section" class="comment-section">
+      <h3>Leave a Comment</h3>
+      <div class="comment-form">
+        <input type="text" id="name" placeholder="Your Name">
+        <textarea id="comment" rows="4" placeholder="Your Comment"></textarea>
+        <button onclick="submitComment()">Submit</button>
+      </div>
+      <div class="comments-list" id="comments-list">
+        <!-- Comments will be displayed here -->
+      </div>
+    </section>
+
+    <section id="contact" class="comment-section">
+  <h2>Contact Us</h2>
+  <div class="contact-form">
+    <input type="text" id="contact-name" placeholder="Your Name">
+    <input type="email" id="contact-email" placeholder="Your Email">
+    <textarea id="contact-message" rows="4" placeholder="Your Message"></textarea>
+    <button onclick="submitContact()">Submit</button>
+  </div>
+</section>
+
+
+  <footer>
+    <p>&copy; 2024 PhilippineAuditoryArts. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function submitComment() {
+      var name = document.getElementById('name').value;
+      var comment = document.getElementById('comment').value;
+
+      if (name && comment) {
+        var commentList = document.getElementById('comments-list');
+
+        var newComment = document.createElement('div');
+        newComment.classList.add('comment');
+
+        newComment.innerHTML = '<p class="author">' + name + ' commented:</p><p>' + comment + '</p>';
+
+        commentList.appendChild(newComment);
+
+        // Clear the form fields after submission
+        document.getElementById('name').value = '';
+        document.getElementById('comment').value = '';
+      } else {
+        alert('Please enter both a name and a comment.');
+      }
+    }
+  function submitContact() {
+    var name = document.getElementById('contact-name').value;
+    var email = document.getElementById('contact-email').value;
+    var message = document.getElementById('contact-message').value;
+
+    if (name && email && message) {
+      alert("Thank you, " + name + "! Your message has been received. We will contact you shortly at " + email + ".");
+      // Clear form fields after submission
+      document.getElementById('contact-name').value = '';
+      document.getElementById('contact-email').value = '';
+      document.getElementById('contact-message').value = '';
+    } else {
+      alert('Please fill out all fields before submitting.');
+    }
+  }
+  </script>
+</body>
+</html>

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PowerPoint-Like Website</title>
+    <style>
+        body {
+            text-align: center;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('Art gallery bg.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-color: #cebba7;
+        }
+
+        header {
+            background-color: #db9b46;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 45px;
+            font-family: 'Brush Script MT', sans-serif;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .slide-container {
+            width: 100%;
+            height: calc(100vh - 80px); 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            margin-top: 80px; 
+        }
+
+        .slide {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 60%;
+            max-width: 800px;
+            background-color: #cebba7; 
+            opacity: 0.9; 
+            padding: 20px; 
+            border-radius: 10px; 
+            border: 10px solid #c1955a; 
+            position: relative;
+        }
+
+        .slide img {
+            width: 100%;
+            max-height: 400px;
+            border-radius: 10px;
+        }
+
+        .slide h2 {
+            margin: 20px 0 10px;
+        }
+
+        .slide p {
+            font-size: 18px;
+        }
+
+        .navigation {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 70%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .button {
+            background-color: #cebba7;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: black;
+            color: white;
+        }
+
+        .button[disabled] {
+            background-color: #cebba7;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <b>Welcome to the Art Gallery</b>
+    </header>
+
+    <div class="slide-container">
+        <!-- Slide 1 -->
+        <div class="slide" id="slide-1" style="display: flex;">
+            <img src="Kolitong.jpg" alt="Slide 1">
+            <h2><b>Pre colonial period</b></h2>
+			<h2><b>Kolitong</b></h2>
+            <p>A kolitong is a bamboo polychordal tube zither from the Bontok people living in the Province of Kalinga, in the Philippines. It has six bamboo fiber strings that run parallel to its tube body. The strings are numbered from one to six, from lowest to highest pitch. There are incised geometric carving in the center as decoration. The bamboo tube acts as the instruments’ resonator body with holes along the body and both ends are closed by the bamboo nodes. Each end is adorned with cloth and beads. In the Kalinga Province, men play the kolitong at night as a solo instrument. A variety of bamboo tube zithers are found throughout the Philippine archipelago, each zither differing from the other in name, size, and design depending on its associated ethnic group.
+</p>
+
+<br>
+<p>Imagine sitting peacefully in the evening and suddenly a bamboo tube zither, echoing through the air.The Pagang In the Philippines during the era of the Spanish colonization, the instrumental sonorous sound called the Pagang was the central event in the social life of the locals. The Pagang, a bamboo tube zither created by Hanunoo Mangyans, was employed in the performance of various rituals, celebrations, and also in the day to day life of the participants. This instrument made from only natural materials was a unique way of interacting with a certain sound, which oftentimes was the connection of the community to the cultural and spiritual practices. It would be hard to deny the fact that the Pagang is one of the most authentic and innovative art pieces produced by the native people, who are designers of the genius in utilizing the materials around them to create an inimitable and meaningful hearing experience Hearing the Pagang played today is like stepping back in time it gives you chills to think it was part of rituals centuries ago.
+</p>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide" id="slide-2">
+            <img src="Zarzuela.jpg" alt="Slide 2">
+            <h2><b>Spanish colonial period</b></h2>
+			<h2><b>Zarzuela</b></h2>
+zarzuela, form of Spanish or Spanish-derived musical theatre in which the dramatic action is carried through an alternating combination of song and speech. Topics of the libretti (texts of the productions) vary widely, ranging from stories derived from Greco-Roman mythology to tales of modern-day life in Madrid, in former Spanish colonies, or in other areas with a large Hispanic population. Most zarzuelas incorporate vocal ensemble numbers (such as trios and duets), lyrical solo songs known as romanzas, various types of local folk musics, and dance.
+
+</p>
+
+<br>
+
+<p>This is the charm of Zarzuela: it kept the Filipino identity alive even in the darkest times. The audience is taken away to another place. This conglomeration of drama, music, and dance was an expression of what is more than just entertainment; they were reflections of Filipino life and culture. Zarzuela was so strong because it was a combination of many elements: cheerful pieces, touching dialogues, and regular rhythmic motion. It was not limited to mere listening to it as it widened the imagination and feelings. Although the people were under heavy restrictions due to limited freedom, it was the theater performances that would bring joy and delight to many Filipinos. Zarzuela was not just a fun thing. It quietly became a form of resistance, reminding people of their identity and unity. The country was controlled by the Japanese, but through Zarzuela, Filipinos held onto their culture, pointing out that art can be a powerful weapon, even without bullets.
+</p>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide" id="slide-3">
+            <img src="Bodabil.jpg" alt="Slide 3">
+            <h2><b>American Colonial Period</b></h2>
+			<h2><b>Bodabil</b></h2>
+            <p>bodabil, was a popular genre of entertainment in the Philippines from the 1910s until the mid-1960s. For decades, it competed with film, radio and television as the dominant form of Filipino mass entertainment. It peaked in popularity during the Japanese occupation in the Philippines from 1941 to 1945. Many of the leading figures of Philippine film in the 20th century, such as Dolphy, Nora Aunor, Leopoldo Salcedo and Rogelio de la Rosa, began their showbusiness careers in bodabil.
+</p>
+		<br>
+		<p>American Colonial Period: 
+Close your eyes and imagine the Philippines in the early 1900s. Streets buzzed with life, and the sounds of blues, folk music, and rock & roll began to mix with the melodies of traditional Filipino music. These American-introduced new musical genres were more than just entertainment; they were representations of influence and transformation.  Some Americans initially found the odd sounds amusing. Native music actually lost its meaning when Americans called it "crazy." This pertained to the singing and dance of the Igorots. Instead of just sitting and gloating, the Filipinos welcomed the transformation. The 1950s marked the emergence of Philippine rock music as Filipinos, joined by a few rock movements, strongly vibrated to fast beats while performing their own songs in solid Tagalog. Fun wasn't the only purpose of the music. It evolved into a voice for a new generation, expressing feelings, stories and ambitions in a style that was both contemporary and distinctly Filipino. This energy is still present today in Original Pilipino Music (OPM), which serves as a reminder of how Filipinos can take something foreign and turn it into something that is uniquely their own. It is a perfect combination of creativity and cultural pride.
+</p>
+        </div>
+ 
+
+        <!-- Slide 4 to 13 -->
+        <div class="slide" id="slide-4">
+            <img src="Jazz.jpg" alt="Slide 4">
+            <h2><b>Post war era</b></h2>
+			<h2><b>Jazz</b></h2>
+            <p>The Japanese discouraged jazz and the music of the western allies, and favored the creation and performance of native musical forms. Prizes were awarded to compositions utilizing native themes. Filipino composers and conductors were invited to give concerts. The impresario; Alfredo Lozano organized the New Philippine Symphony Orchestra composed of Filipino musicians. 
+</p>
+<br>
+<p>Among all the arts that relied on the auditory medium, radio broadcasting was the most relevant during the postwar era.  Following the Second World War, radio became the central mode of bringing entertainment and information. Filipinos were interested in listening to radio drama, variety shows, and music programs, which brought a sense of connection and community in the reconstruction time. Radio played a very important role in popularizing original music and also was in the front line to revive and make Filipino music more available. A generational movement that had a significant impact on the Filipino people's cultural identity at the time, radio served as a medium for them to express oneself through music. 
+</p>
+        </div>
+        <div class="slide" id="slide-5">
+            <img src="Folk music.jpg" alt="Slide 5">
+			<h2><b>Contemporary period</b></h2>
+            <h2><b>Folk music</b></h2>
+            <p>Folk music is a music genre that includes traditional folk music and the contemporary genre that evolved from the former during the 20th-century folk revival. Some types of folk music may be called world music. Traditional folk music has been defined in several ways: as music transmitted orally, music with unknown composers, music that is played on traditional instruments, music about cultural or national identity, music that changes between generations (folk process), music associated with a people's folklore, or music performed by custom over a long period of time. It has been contrasted with commercial and classical styles. The term originated in the 19th century, but folk music extends beyond that.
+</p>
+
+        </div>
+        <div class="slide" id="slide-6">
+            <img src="Kulintang Music.jpg" alt="Slide 6">
+			<h2><b>Pre colonial period</b></h2>
+            <h2><b>Kulintang</b></h2>
+            <p>The kulintang is a traditional ensemble of gongs that plays a significant role in the musical heritage of various ethnic groups in the Philippines. It is often used in rituals, celebrations, and communal gatherings, showcasing the rich oral traditions and musical practices of pre-colonial Filipinos.</p>
+        </div>
+        <div class="slide" id="slide-7">
+            <img src="Kundiman A.jpg" alt="Slide 7">
+			<h2><b>Spanish colonial period</b></h2>
+            <h2><b>Kundiman</b></h2>
+            <p>Kundiman is a genre of traditional Filipino love songs that emerged during the Spanish colonial period. It blends indigenous musical styles with Spanish influences, characterized by its lyrical melodies and romantic themes. Kundiman became a medium for expressing Filipino sentiments and identity during a time of colonization.
+</p>
+        </div>
+        <div class="slide" id="slide-8">
+            <img src="Pinoy Art song.jpg" alt="Slide 8">
+			<h2><b>American colonial period</b></h2>
+            <h2><b>Filipino Art Songs</b></h2>
+            <p>This period saw the rise of Filipino art songs, which were influenced by Western classical music. Composers like Antonio Molina and Nicanor Abelardo created works that incorporated both Western musical forms and Filipino themes, reflecting the cultural blending that occurred during American rule.</p>
+        </div>
+        <div class="slide" id="slide-9">
+            <img src="Pasyon.jpg" alt="Slide 9">
+            <h2><b>Japanese Occupation</b></h2>
+            <h2><b>Pasyon</b></h2>
+            <p>The Pasyon is a traditional narrative chant that recounts the life and passion of Jesus Christ. During the Japanese occupation, this form of auditory art served as both a spiritual expression and a subtle form of resistance against oppression, allowing communities to maintain their cultural identity.</p>
+        </div>
+        <div class="slide" id="slide-10">
+            <img src="Pinoy OPM.jpg" alt="Slide 10">
+            <h2><b>Post war era</b></h2>
+            <h2><b>Original Pilipino Music (OPM)</b></h2>
+            <p>The post-war era gave rise to OPM, which includes various genres such as rock, pop, and folk music. Artists began to create music that resonated with Filipino experiences and social issues, leading to a vibrant music scene that reflected national identity.</p>
+        </div>
+        <div class="slide" id="slide-11">
+            <img src="Hip Hop.jpg" alt="Slide 11">
+            <h2><b>Contemporary period</b></h2>
+            <h2><b>Hip Hop</b></h2>
+            <p>In contemporary times, hip-hop has emerged as a significant auditory art form in the Philippines. It serves as a platform for self-expression among youth, addressing social issues, identity, and culture through rap lyrics and beats. Artists like Francis M and Gloc-9 have popularized this genre, making it an integral part of modern Filipino culture.</p>
+        </div>
+        <div class="slide" id="slide-12">
+            <img src="Pagang PCr.jpg" alt="Slide 12">
+            <h2><b>Pre colonial period</b></h2>
+            <h2><b>Pagang</b></h2>
+            <p>The pagang, a bamboo tube zither, is a prime example of pre-colonial Philippine auditory art. This indigenous instrument, crafted from natural materials, was widely used by the Hanunoo Mangyan people. The pagang's unique sound and playing technique were deeply integrated into their cultural practices, accompanying rituals, celebrations, and everyday life. Its construction and playing style reflect the ingenuity and artistic sensibilities of the Hanunoo Mangyan, showcasing the rich musical heritage of pre-colonial Philippines. By studying the pagang, we gain insights into the ancient traditions, beliefs, and aesthetic values of these indigenous communities.
+</p>
+        </div>
+        <div class="slide" id="slide-13">
+            <img src="Moro SCr.jpg" alt="Slide 13">
+            <h2><b>Spanish colonial period</b></h2>
+            <h2><b>Moro Moro</b></h2>
+            <p>Moro-moro, the earliest known form of organized theatre in the Philippines; it was created by Spanish priests. Other than epic recitations, whatever indigenous theatrical forms may have existed there before were obliterated by the Spanish to facilitate the spread of Christianity.
+</p>
+<br>
+<p>
+The Moro-moro is a type of auditory art that was introduced during the Spanish Colonial period.  The performance, a combination of music and drama, was brought to the Philippines by the Spanish priests in their endeavor to spread the message of Christianity. The performances were enacted in the form of dramas, where actors dressed in costumes and communicated through music and dance, the Moro-moro emerged the performance replacing the traditional mythological performances, as the colonizers tried to promote the Filipino version of the Spanish drama by changing the indigenous culture, the Moro-moro, which was a mix of Spanish and Filipino influences, became a cultural landmark, if you had to adapt one of these traditions today, what would it look or sound like? 
+Japanese Occupation: 
+Watching a Zarzuela. Music is played, the actors dance, and you almost hope for a little while in the middle of chaos. This is the charm of Zarzuela: it kept the 
+</p>
+
+        </div>
+		<div class="slide" id="slide-14">
+            <img src="Music ACr.jpg" alt="Slide 14">
+            <h2><b>American colonial period</b></h2>
+            <h2><b>Music</b></h2>
+            <p>During the American colonial period in the Philippines, the colonial administration controlled auditory environments to establish sound as a symbol of their power. They also introduced new types of music that became popular, and the sounds of native Igorot villages were considered strange and frightening by some U.S. Americans. The U.S. introduced American blues, folk music, R&B, and rock & roll, which became popular. In the late 1950s, native performers adapted Tagalog lyrics to North American rock & roll music, which led to the origins of Philippine rock. 
+</p>
+        </div>
+		<div class="slide" id="slide-15">
+            <img src="BroadC PWr.jpg" alt="Slide 15">
+            <h2><b>Post war era</b></h2>
+            <h2><b>Broadcasting</b></h2>
+            <p>Radio continued to be a major source of entertainment and information in the post-war era. Radio dramas, variety shows, and music programs were popular among Filipinos.
+</p>
+        </div>
+		<div class="slide" id="slide-16">
+            <img src="PL Cp.jpg" alt="Slide 16">
+             <h2><b>Contemporary period</b></h2>
+            <h2><b>Literature
+</b></h2>
+            <p>TLiterature, traditionally a visual art form, has evolved into an auditory experience in contemporary Philippines. Performance poetry and spoken word have revitalized the oral tradition, emphasizing the musicality of language. Audiobooks and podcasts have made literature more accessible, allowing listeners to immerse themselves in stories through sound. Literary adaptations into radio plays, podcasts, and audio dramas have brought new life to classic works. The interplay of language, rhythm, and dialect further enhances the auditory dimension of literature, making it a captivating and multifaceted art form in the contemporary Philippine context. 
+</p>
+<br>
+<p>Literature The new age of literature in the Philippines is one of the auditory forms that have now been more contemporary. The rise of spoken word and performance poetry has given us a chance to hear lots of literary works that would have been the same without the audio, but they draw our attention to the importance of vocal energy, rhythm, and voice tuning. Audio books, as well as the trendy podcasts, have also made literature more accessible to the people by going with them as they listen to the stories and poems. Because they inspired the classic texts and made them more accessible to contemporary readers, literary works like radio plays and audio dramas have been known to engage listeners.
+</p>
+        </div>
+		<div class="slide" id="slide-17">
+            <img src="Kubing PCp.jpg" alt="Slide 17">
+            <h2><b>Post colonial period</b></h2>
+            <h2><b>Kubing</b></h2>
+            <p>This relic being the kubing or mouth harp, is found in the Philippine province of Maguindanao. Among the Indonesian islands and in southerly islands, the kubing, like all forms of instrumentation, is played by both Muslim and non-Muslim tribes. 
+</p>
+        </div>
+		<div class="slide" id="slide-18">
+            <img src="Harana SCp.jpg" alt="Slide 18">
+            <h2><b>Spanish colonial period</b></h2>
+            <h2><b>Harana</b></h2>
+            <p>We now refer to it as the Old-Fashioned Serenading. Harana is from the Spanish Era here in the Philippines. It is usually practiced in small towns and rural towns. This is how men used to woo women in the past.
+</p>
+        </div>
+		<div class="slide" id="slide-19">
+            <img src="KE Jo.jpg" alt="Slide 19">
+            <h2><b>Japanese Occupation 
+</b></h2>
+            <h2><b>Kabuki and Enka</b></h2>
+            <p>Modern enka is a type of contemporary Japanese popular music utilizing five tones, or pentatonicity, and kobushi, a singing method with much melisma. Enka songs generally swing toward sentimental ballads that evoke the sounds of ryūkōka, a genre of traditional Japanese music popular in the nineteenth and early twentieth centuries.
+</p>
+        </div>
+		<div class="slide" id="slide-20">
+            <img src="TG PCp.jpg" alt="Slide 20">
+            <h2><b>Pre colonial period</b></h2>
+            <h2><b>Tongatong</b></h2>
+            <p>A Tongatong is the bamboo percussion instrument used by the Kalinga folk in their house
+blessings where they are believed to have communication with spirits. The cut bamboos
+made of different lengths, when hit against soft earth, produce a certain drone that
+reverberates through its open mouth. When the whole set of Tongatong is played in
+interloping rhythm and lengthened with the tribal chanting, it could put both the audience
+and the dancers into trance.</p>
+        </div>
+		<div class="slide" id="slide-21">
+            <img src="Ss SCp.jpg" alt="Slide 21">
+            <h2><b>Spanish Colonial Period</b></h2>
+            <h2><b>Sarswela</b></h2>
+            <p>Sarswela is a dramatic theatrical performance that involves dialogue, music, and dance.
+This sarswela originated in Spain during the 17th century but very soon became one of
+the most popular forms of entertainment during that time in the Philippines. The format
+was introduced by the Spaniards to teach the native population about Catholicism, but it
+very soon evolved into a reflection of the Filipino way of life through its inclusion of
+native dialects, musical heritage, and motifs.</p>
+        </div>
+		<div class="slide" id="slide-22">
+            <img src="TLUD Jo.jpg" alt="Slide 22">
+            <h2><b>Japanese Occupation</b></h2>
+            <h2><b>Traditional Lullabies (Sa Ugoy ng Duyan)</b></h2>
+            <p>As it would be during the occupation of the Japanese, it also played a great role in
+preserving the indigenous culture. One of the greatest is "Sa Ugoy ng Duyan," composed
+by Lucio San Pedro with the lyrics of Levi Celerio. This lullaby was made during the
+Japanese occupation. It depicts the integration of local tunes with musical traditions that
+derive from Spanish and American influences during that time period. Its legacy,
+therefore, depicts how Filipino identity was managed through lullabies even during times
+of external influence
+</p>
+        </div>
+		<div class="slide" id="slide-23">
+            <img src="PM Pw.jpg" alt="Slide 23">
+            <h2><b>Post war</b></h2>
+            <h2><b>Protest music</b></h2>
+            <p>Political themes in songs became major hits during the post war period, particularly
+during Ferdinand Marcos' martial law reign in the 1970s. Such songs by Fred Panopio,
+Bert de Leon, and Heber Bartolome were transformed into anthems for resistance
+towards dictatorship. Folk songs such as "Bayan Ko" and "Nandiyan Ka Na Ba?"
+captured the collective feeling of freedom and justice within society, coupled with
+various socio-economic imbalances
+</p>
+        </div>
+		<div class="slide" id="slide-24">
+            <img src=".jpg" alt="Slide 24">
+            <h2>Slide 15 Title</h2>
+            <p>This is the content of Slide 15. Add your text here.</p>
+        </div>
+		<div class="slide" id="slide-25">
+            <img src=".jpg" alt="Slide 25">
+            <h2>Slide 15 Title</h2>
+            <p>This is the content of Slide 15. Add your text here.</p>
+        </div>
+		<div class="slide" id="slide-26">
+            <img src=".jpg" alt="Slide 26">
+            <h2>Slide 15 Title</h2>
+            <p>This is the content of Slide 15. Add your text here.</p>
+        </div>
+
+        <div class="navigation">
+            <button class="button" id="prev-btn" onclick="prevSlide()" disabled>Back</button>
+            <button class="button" id="next-btn" onclick="nextSlide()">Next</button>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 23;
+
+        function showSlide(slideNumber) {
+            for (let i = 1; i <= totalSlides; i++) {
+                document.getElementById(`slide-${i}`).style.display = "none";
+            }
+
+            document.getElementById(`slide-${slideNumber}`).style.display = "flex";
+
+            document.getElementById("prev-btn").disabled = slideNumber === 1;
+            document.getElementById("next-btn").disabled = slideNumber === totalSlides;
+        }
+
+        function nextSlide() {
+            if (currentSlide < totalSlides) {
+                currentSlide++;
+                showSlide(currentSlide);
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 1) {
+                currentSlide--;
+                showSlide(currentSlide);
+            }
+        }
+    </script>
+</body>
+</html>
